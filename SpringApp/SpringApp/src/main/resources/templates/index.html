@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <h1>GESTION CALIFICACIONES</h1>
+            <h2>CUATRIMESTRE 9</h2>
+        </div>
+    </div>
+    
+    <div class="container mt-4">
+    <a th:href="@{/new}" class="btn btn-primary">Nuevo registro</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>NOMBRE</td>
+                    <td>REDES</td>
+                    <td>BASES DE DATOS</td>
+                    <td>DESARROLLO WEB</td>
+                    <td>CALCULO </td>
+                    <td>PROMEDIO</td>
+                    <td>COORDINADOR</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="alumno:${alumnos}">
+                    
+                    <td th:text="${alumno.nombre}"></td>
+                    <td th:text="${alumno.redes}"></td>
+                    <td th:text="${alumno.bd}"></td>
+                    <td th:text="${alumno.d_web}"></td>
+                    <td th:text="${alumno.calculo}"></td>
+                    <td th:text="${alumno.prom}"></td>
+                    <td th:text="${alumno.coord}"></td>
+                    <td>
+                        <a th:href="@{/editar/}+${alumno.id}" class="btn btn-warning">Editar</a>
+                        <a class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
