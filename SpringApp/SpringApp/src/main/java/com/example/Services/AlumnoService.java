@@ -39,7 +39,7 @@ public class AlumnoService implements IAlumnoService{
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		data.deleteById(id);
 		
 	}
 

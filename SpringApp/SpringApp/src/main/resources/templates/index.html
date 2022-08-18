@@ -41,7 +41,7 @@
                     <td th:text="${alumno.coord}"></td>
                     <td>
                         <a th:href="@{/editar/}+${alumno.id}" class="btn btn-warning">Editar</a>
-                        <a class="btn btn-danger">Eliminar</a>
+                        <a th:href="@{/eliminar/}+${alumno.id}" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>
             </tbody>
