@@ -92,10 +92,12 @@ public class Alumno {
 	}
 
 	public int getProm() {
+		prom= (redes+bd+calculo+d_web)/4;
 		return prom;
 	}
 
 	public void setProm(int prom) {
+		prom= (redes+bd+calculo+d_web)/4;
 		this.prom = prom;
 	}
 
